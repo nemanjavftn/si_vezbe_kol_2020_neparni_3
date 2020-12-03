@@ -17,7 +17,7 @@ namespace BusinessLayer
             this.carRepository = new CarRepository();
         }
 
-        public List<Car> GetAllCars()
+        public List<Car> GetAllCars()                   //komitovao sam bez referenciranja, posle je htelo da se referencira...
         {
             return this.carRepository.GetAllCars();
         }
