@@ -21,8 +21,9 @@ namespace PresentationLayerWeb
 
             foreach (Car s in cars)
             {
-                listBoxCars.Items.Add(s.Id + ". " + s.Model + ". " + s.ProductionYear); 
-                   
+                listBoxCars.Items.Add(s.Id + ". " + s.Model + ". " + s.ProductionYear);
+
+            }
         }
     }
 }
