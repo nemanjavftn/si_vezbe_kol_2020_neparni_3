@@ -18,7 +18,11 @@ namespace PresentationLayer
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            List<Car> list = this.blayer.getAllCars();
+            foreach(Car c in list)
+            {
+                ListBoxCars.Items.Add(c.Id + " " + c.Model + " " + c.ProductionYear);
+            }
         }
 
         protected void Dodaj_Click(object sender, EventArgs e)
@@ -27,6 +31,11 @@ namespace PresentationLayer
             car.Model = TextBoxModel.Text;
             car.ProductionYear = Convert.ToInt32 (TextBoxYear.Text);
             this.blayer.insertCar(car);
+            List<Car> list = this.blayer.getAllCars();
+            foreach (Car c in list)
+            {
+                ListBoxCars.Items.Add(c.Id + " " + c.Model + " " + c.ProductionYear);
+            }
         }
     }
 }
