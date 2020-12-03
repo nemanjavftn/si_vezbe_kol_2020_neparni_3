@@ -16,14 +16,14 @@ namespace BusinessLayer
         {
             this.carRepositorium = new CarRepositorium();
         }
-        public List<Car> GetAllVets()
+        public List<Car> GetAllCars()
         {
             return this.carRepositorium.GetAllCars();
         }
 
-        public bool InsertVet(Car c)
+        public bool InsertCar(Car c)
         {
-            if (this.carRepositorium.InsertCar(c) >0 )
+            if (this.carRepositorium.InsertCar(c) > 0)
                 return true;
 
             return false;
