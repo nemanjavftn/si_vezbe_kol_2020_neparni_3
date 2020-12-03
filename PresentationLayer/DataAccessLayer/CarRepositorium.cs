@@ -30,7 +30,7 @@ namespace DataAccessLayer
             {
                 SqlCommand command = new SqlCommand();
                 command.Connection = dataConnection;
-                command.CommandText = "SELECT * FROM  Vets";
+                command.CommandText = "SELECT * FROM  Cars";
                 dataConnection.Open();
 
                 SqlDataReader dataReader = command.ExecuteReader();
